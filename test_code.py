@@ -1,0 +1,1 @@
+print('Hello Github i am Hamza Atiq')
