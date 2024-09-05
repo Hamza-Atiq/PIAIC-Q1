@@ -1,3 +1,5 @@
+# Print hello to piaic students
 print('hello PIAIC students')
 
-prinT('hello Piaci Students)
+# white print wrong for error 
+prinT('hello Piaci Student)

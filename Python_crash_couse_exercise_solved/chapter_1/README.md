@@ -7,6 +7,7 @@
 **Answer** : 
 
 1. **Smart mirror** which tell the custormer in which dress you look beautiful and gives recommendation, it helps in all Big Malls for shoping clothes. 
+
 [Impressed with this](https://www.arayasolutions.com/virtual-dressing-mirror/)
 
 2. **Humanoid Robot** which do all the home related stuff
