@@ -26,16 +26,16 @@ print()
 
 # 4.4 One Million
 
-# big_list : list[int] = [num for num in range(1 , 1000000)]
-# print(big_list)
+big_list : list[int] = [num for num in range(1 , 1000000)]
+print(big_list)
 
-# #############################################
+#############################################
 
-# # 4.5 Summing a million
+# 4.5 Summing a million
 
-# print(min(big_list))
-# print(max(big_list))
-# print(sum(big_list) , '\n')
+print(min(big_list))
+print(max(big_list))
+print(sum(big_list) , '\n')
 
 ###############################################
 
