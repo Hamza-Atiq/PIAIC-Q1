@@ -80,6 +80,41 @@ del(list_of_family_members[0])
 
 print(list_of_family_members , '\n')
 
+#############################################
 
+# 3.8 Seeing the world
+
+list_of_locations_to_visit : list [str]= ['Makkah' , 'Germany' , 'Madinah' , 'Japan' , 'Canada' ]
+print(list_of_locations_to_visit)
+print(sorted(list_of_locations_to_visit))
+print(list_of_locations_to_visit)
+print(sorted(list_of_locations_to_visit , reverse= True))
+print(list_of_locations_to_visit)
+list_of_locations_to_visit.reverse()
+print(list_of_locations_to_visit)
+list_of_locations_to_visit.reverse()
+print(list_of_locations_to_visit)
+list_of_locations_to_visit.sort()
+print(list_of_locations_to_visit)
+list_of_locations_to_visit.sort(reverse= True)
+print(list_of_locations_to_visit , '\n')
+
+########################################################
+
+# 3.9 len function
+print(len(list_of_locations_to_visit ) ,'\n')
+
+########################################################
+
+# 3.10 Every Function
+
+knowledge_list  : list[str ] = ['mountains' , 'rivers' , 'cities']
+knowledge_list.append('languages')
+knowledge_list.insert(0 , 'religion')
+print(len(knowledge_list))
+print(knowledge_list)
+print(knowledge_list.pop())
+del(knowledge_list[0])
+print(knowledge_list , '\n')
 
 
