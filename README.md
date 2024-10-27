@@ -1,33 +1,30 @@
-# PIAIC-Q1
-Creating a GitHub of all *task* cover in __class__ 
-======
 
-1. # Pakistan is a beautiful Country
-    - [You read the histroy further](https://en.wikipedia.org/wiki/Pakistan)
-    - [History in detail](https://www.britannica.com/place/Pakistan "Britannica report")
-2. ## Pakistan have 4 Provinces
-    * ### Pakistan Capital is **Islamabad**
-------
-3. #### Pakistan best Prime Minister ~~Nawaz sharif~~  Imran Khan
--------
-* Pakistani loves __Cricket__ 
-------
-4. ###### Pakistan Loves **Biryani**
-------
-5. [full detail of pakistan study here][detail history of pakistan]
+# Hi there, I'm Hamza Atiq! 👋
 
-[detail history of pakistan]: https://en.wikipedia.org/wiki/Pakistan
+Welcome to my GitHub profile! I'm a coding enthusiast on a journey to sharpen my skills, with a special focus on Python and its applications. I enjoy tackling programming challenges, building projects, and expanding my knowledge in data structures, algorithms, and beyond.
 
-[python code](./test_code.py)
+## 🚀 About Me
+- 📘 I’m currently working through **Python programming books** and completing exercises to build a solid foundation.
+- 🌱 Learning new libraries and best practices to write clean, efficient code.
+- 💻 Exploring new areas like **Data Science**, **Machine Learning**, **Generative AI**, and **Automation**.
 
-[Who is Imran Khan ][1]
+## 🔧 Languages and Tools
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![VS Code](https://img.shields.io/badge/Editor-VSCode-blue) ![GitHub](https://img.shields.io/badge/Platform-GitHub-lightgrey)
 
-Imran Khan achievements [Imran khan done it]
+## 📂 Featured Projects
+Here are some highlights of what I've been working on. Each project showcases a different aspect of Python programming, from fundamental exercises to intermediate concepts.
 
-Imran khan best Photos <https://www.pinterest.com/mamoona_qayyum/imran-khan/>
+### 📚 [Python Exercises](https://github.com/yourusername/python-exercises)
+A collection of exercises from Python books, organized by chapters and topics. It includes code snippets that improve fundamental skills, like list operations, loops, and comprehensions.
 
+### 🔢 [Project 2 - Data Processing]
+_(A short description of what this project accomplishes)_
 
+> Find more projects pinned below and in my repositories section.
 
-[1]: https://en.wikipedia.org/wiki/Imran_Khan
+## 📫 Get in Touch
+I’d love to connect! Feel free to reach out through:
+- **Email**: hamzaatiq34@gmail.com
+- **LinkedIn**: [Hamza Atiq](https://www.linkedin.com/in/hamza-atiq-73952613b/?trk=uno-choose-ge-no-intent&dl=no)
 
-[Imran khan done it]: https://en.wikipedia.org/wiki/List_of_awards_and_honours_received_by_Imran_Khan#:~:text=He%20was%20the%20captain%20of,Wisden%20Cricketer%20of%20the%20Year.
+Thanks for visiting my profile! 😊
