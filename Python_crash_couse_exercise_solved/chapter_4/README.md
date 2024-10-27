@@ -51,17 +51,17 @@ print()
 Generates a list of numbers from 1 to 1,000,000. This demonstrates the use of Python’s range function and handling large sequences (commented out to prevent excessive output).
 
 ```python
-# big_list = [num for num in range(1, 1000000)]
-# print(big_list)
+big_list = [num for num in range(1, 1000000)]
+print(big_list)
 ```
 
 ### 4.5 Summing a Million
 Finds the minimum, maximum, and sum of a list containing numbers from 1 to 1,000,000. This is useful for learning list aggregation functions.
 
 ```python
-# print(min(big_list))
-# print(max(big_list))
-# print(sum(big_list), '\n')
+print(min(big_list))
+print(max(big_list))
+print(sum(big_list), '\n')
 ```
 
 ### 4.6 Odd Numbers
