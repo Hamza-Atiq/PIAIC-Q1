@@ -101,7 +101,7 @@ print(list_of_locations_to_visit , '\n')
 
 ########################################################
 
-# 3.9 len function
+# 3.9 Len function
 print(len(list_of_locations_to_visit ) ,'\n')
 
 ########################################################
@@ -116,5 +116,6 @@ print(knowledge_list)
 print(knowledge_list.pop())
 del(knowledge_list[0])
 print(knowledge_list , '\n')
+
 
 
