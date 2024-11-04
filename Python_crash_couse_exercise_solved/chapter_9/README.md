@@ -1,6 +1,3 @@
-Here's the formatted Markdown file for Chapter 9 exercises. This includes explanations, improved formatting, and corrections where needed.
-
----
 
 # Chapter 9: Classes
 
@@ -15,6 +12,10 @@ In this chapter, we explore Python classes and objects. These exercises involve 
 3. [Users](#3-users)
 4. [Number Served](#1-number-served)
 5. [Login Attempts](#2-login-attempts)
+6. [Ice Cream Stand](#1-ice-cream-stand)
+7. [Admin](#2-admin)
+8. [Privileges](#3-privileges)
+9. [Battery Upgrade](#4-battery-upgrade)
 
 
 ---
@@ -272,4 +273,208 @@ In this example, the `increment_login_attempts` method is used to simulate multi
 
 ---
 
+### 6. Ice Cream Stand
 
+**Description**: This exercise demonstrates inheritance by creating a subclass, `IceCreamStand`, derived from the `Restaurant` class. We add a `flavours` attribute and a method to display available flavors.
+
+```python
+class Restaurant:
+    def __init__(self, restaurant_name: str, cuisine_type: str):
+        """
+        Initialize the restaurant with a name, cuisine type, and default number of customers served.
+        """
+        self.name = restaurant_name
+        self.type = cuisine_type
+        self.number_served = 0  # Default value for the number of customers served
+
+    def describe_restaurant(self):
+        """
+        Prints the restaurant's name and cuisine type.
+        """
+        print(f'Restaurant name: {self.name.title()}')
+        print(f'Restaurant cuisine type: {self.type.title()}')
+
+    def open_restaurant(self):
+        """
+        Prints a message indicating that the restaurant is open.
+        """
+        print('The restaurant is open.\n')
+
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type, flavours):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavours = flavours
+
+    def ice_cream_flavours(self):
+        """
+        Prints the list of available ice cream flavors.
+        """
+        print("Ice cream flavors offered by the restaurant:")
+        for flavour in self.flavours:
+            print(f"- {flavour}")
+
+# Creating an instance of IceCreamStand
+stand1 = IceCreamStand('Tehzeeb', 'Ice Creams', ['Mango', 'Banana', 'Strawberry', 'Chocolate'])
+stand1.ice_cream_flavours()
+```
+
+---
+
+### 7. Admin
+
+**Description**: This exercise uses inheritance to create an `Admin` class based on the `User` class, adding a `privileges` attribute and a method to display admin-specific privileges.
+
+```python
+class User:
+    def __init__(self, first_name: str, last_name: str, age: int, location: str, education: str, profession: str):
+        """
+        Initialize user with first name, last name, age, location, education, and profession.
+        """
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.age = age
+        self.location = location.title()
+        self.education = education.title()
+        self.profession = profession.title()
+
+    def describe_user(self):
+        """
+        Print a summary of the user's information.
+        """
+        print(f"{self.first_name} {self.last_name} is {self.age} years old.")
+        print(f"They live in {self.location}. They completed their {self.education}.")
+        print(f"They work as a {self.profession}.\n")
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, location, education, profession, privileges):
+        super().__init__(first_name, last_name, age, location, education, profession)
+        self.privileges = privileges
+
+    def show_privileges(self):
+        """
+        Prints the list of admin privileges.
+        """
+        print("Admin privileges include:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+# Example usage
+list_of_privileges = ['can add post', 'can delete post', 'can ban user']
+admin1 = Admin('Hamza', 'Atiq', 27, 'Rawalpindi', 'BSc', 'Generative AI Engineer', list_of_privileges)
+admin1.show_privileges()
+```
+
+---
+
+### 8. Privileges
+
+**Description**: This exercise refines the `Admin` class by creating a `Privileges` class, encapsulating privileges in a separate class.
+
+```python
+class Privileges:
+    def __init__(self, privileges):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        """
+        Prints the list of privileges.
+        """
+        print("Admin privileges include:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, location, education, profession, privileges=None):
+        super().__init__(first_name, last_name, age, location, education, profession)
+        self.privileges = Privileges(privileges if privileges is not None else [])
+
+# Example usage
+list_of_privileges = ['can add post', 'can delete post', 'can ban user']
+admin2 = Admin('Ali', 'Raza', 27, 'Jhand', 'BSc', 'Teacher', list_of_privileges)
+admin2.privileges.show_privileges()
+```
+
+---
+
+### 9. Battery Upgrade
+
+**Description**: This exercise demonstrates a nested class by creating a `Battery` class that manages battery-specific details within an `ElectricCar` class. A method to upgrade the battery capacity is also provided.
+
+```python
+class Car:
+    def __init__(self, model, name, year):
+        """
+        Initialize attributes to describe a car.
+        """
+        self.model = model
+        self.name = name
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        """
+        Return a neatly formatted descriptive name.
+        """
+        return f"{self.name} {self.model} {self.year}".title()
+
+    def read_odometer(self):
+        """
+        Print a statement showing the car's mileage.
+        """
+        print(f"This car has {self.odometer_reading} miles on it.")
+
+    def update_odometer(self, mileage):
+        """
+        Set the odometer reading to the given value.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+class Battery:
+    def __init__(self, battery_size=40):
+        """
+        Initialize the battery's attributes.
+        """
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """
+        Print a statement describing the battery size.
+        """
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """
+        Print a statement about the range this battery provides.
+        """
+        range = 150 if self.battery_size == 40 else 225
+        print(f"This car can go about {range} miles on a full charge.")
+
+    def upgrade_battery(self):
+        """
+        Upgrade the battery capacity if it is not already at the maximum.
+        """
+        if self.battery_size != 65:
+            self.battery_size = 65
+
+class ElectricCar(Car):
+    def __init__(self, model, name, year):
+        super().__init__(model, name, year)
+        self.battery = Battery()
+
+# Example usage
+car1 = ElectricCar('Honda', 'Civic', 2020)
+
+# Checking the range before battery upgrade
+print("Before battery upgrade:")
+car1.battery.get_range()
+
+# Upgrading the battery and checking the range again
+car1.battery.upgrade_battery()
+print("\nAfter battery upgrade:")
+car1.battery.get_range()
+```
+
+---
