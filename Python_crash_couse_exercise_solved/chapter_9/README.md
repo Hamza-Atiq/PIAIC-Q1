@@ -16,6 +16,9 @@ In this chapter, we explore Python classes and objects. These exercises involve 
 7. [Admin](#2-admin)
 8. [Privileges](#3-privileges)
 9. [Battery Upgrade](#4-battery-upgrade)
+10. [Dice](#1-dice)
+11. [Lottery](#2-lottery)
+12. [Lottery Analysis](#3-lottery-analysis)
 
 
 ---
@@ -478,3 +481,122 @@ car1.battery.get_range()
 ```
 
 ---
+
+### 10. Dice
+
+**Description**: This exercise introduces a `Die` class to simulate the rolling of a die with a customizable number of sides. By default, the die has 6 sides, but you can specify a different number.
+
+```python
+import random
+
+class Die:
+    """A class representing a die with a specified number of sides."""
+
+    def __init__(self, sides=6):
+        """
+        Initialize the die with the specified number of sides.
+        
+        Parameters:
+        sides (int): Number of sides on the die. Defaults to 6.
+        """
+        self.sides = sides
+
+    def roll_die(self):
+        """
+        Simulate rolling the die by generating a random number between 1 and the number of sides.
+        """
+        num = random.randint(1, self.sides)
+        print(num)
+
+# Roll a 6-sided die 10 times
+print("Rolling a 6-sided die 10 times:")
+side_6 = Die()  # Default is a 6-sided die
+for _ in range(10):
+    side_6.roll_die()
+print()
+
+# Roll a 10-sided die 10 times
+print("Rolling a 10-sided die 10 times:")
+side_10 = Die(sides=10)
+for _ in range(10):
+    side_10.roll_die()
+print()
+
+# Roll a 20-sided die 10 times
+print("Rolling a 20-sided die 10 times:")
+side_20 = Die(sides=20)
+for _ in range(10):
+    side_20.roll_die()
+print()
+```
+
+**Output Explanation**: Each die roll produces a random number from 1 to the number of sides. Rolling different dice shows how the number range changes with the number of sides.
+
+---
+
+### 11. Lottery
+
+**Description**: This exercise simulates a simple lottery where 4 random elements (numbers or letters) are drawn from a predefined list. The winning ticket consists of these 4 elements.
+
+```python
+from random import choice
+
+# Define a list of 10 numbers and 5 letters
+elements = [1, 'a', 4, 'g', 7, 'o', 'p', 9, 'q', 2, 3, 5, 6, 8, 11]
+
+# Select 4 random elements from the list
+selected_elements = [choice(elements) for _ in range(4)]
+
+# Display the winning ticket message
+print(f"Any ticket matching these 4 numbers or letters {selected_elements} wins a prize. \n")
+```
+
+**Output Explanation**: The `choice` function randomly selects 4 elements from the `elements` list. If a ticket matches this randomly selected combination, it is a winning ticket.
+
+---
+
+### 12. Lottery Analysis
+
+**Description**: This exercise analyzes how many attempts it takes to match a specific ticket combination in a lottery. The simulation randomly draws tickets until it matches a predefined ticket.
+
+```python
+from random import choice
+
+# Define a list of 10 numbers and 5 letters as possible ticket elements
+elements = [1, 'a', 4, 'g', 7, 'o', 'p', 9, 'q', 2, 3, 5, 6, 8, 11]
+
+# Define your ticket as a list of 4 specific elements
+my_ticket = [1, 'a', 7, 'q']
+
+# Initialize a counter to count the number of attempts
+attempts = 0
+
+# Start a loop that continues until a ticket matches 'my_ticket'
+while True:
+    # Draw a random ticket by selecting 4 elements
+    drawn_ticket = [choice(elements) for _ in range(4)]
+    
+    # Increment the attempt counter
+    attempts += 1
+    
+    # Check if the drawn ticket matches 'my_ticket'
+    if drawn_ticket == my_ticket:
+        # If they match, print the number of attempts and break the loop
+        print(f"Winning ticket {drawn_ticket} matches your ticket {my_ticket}!")
+        print(f"It took {attempts} attempts to draw the winning ticket. \n")
+        break
+```
+
+**Output Explanation**: This program iteratively draws tickets until the drawn ticket matches `my_ticket`. The number of attempts taken to match the ticket is then displayed. This highlights the odds involved in winning such a lottery.
+
+---
+
+### Getting Started
+To run these exercises, you need Python 3 installed. Each script is standalone, so you can run them individually by executing `python filename.py` in your terminal.
+
+### Author
+**Hamza Atiq**  
+Passionate about learning Python and coding practices.
+
+### Acknowledgments
+Thanks to the authors of the Python book that inspired these exercises.

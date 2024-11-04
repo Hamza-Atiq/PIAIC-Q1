@@ -416,6 +416,102 @@ print("\nAfter battery upgrade:")
 car1.battery.get_range()
 print()
 
+###########################################
+
+# 9.13 Dice
+
+import random
+
+class Die:
+    """A class representing a die with a specified number of sides."""
+
+    def __init__(self, sides=6):
+        """
+        Initialize the die with the specified number of sides.
+        
+        Parameters:
+        sides (int): Number of sides on the die. Defaults to 6.
+        """
+        self.sides = sides
+
+    def roll_die(self):
+        """
+        Simulate rolling the die by generating a random number between 1 and the number of sides.
+        """
+        num = random.randint(1, self.sides)
+        print(num)
+
+# Roll a 6-sided die 10 times
+print("Rolling a 6-sided die 10 times:")
+side_6 = Die()  # Default is a 6-sided die
+for _ in range(10):
+    side_6.roll_die()
+print()
+
+# Roll a 10-sided die 10 times
+print("Rolling a 10-sided die 10 times:")
+side_10 = Die(sides=10)
+for _ in range(10):
+    side_10.roll_die()
+print()
+
+# Roll a 20-sided die 10 times
+print("Rolling a 20-sided die 10 times:")
+side_20 = Die(sides=20)
+for _ in range(10):
+    side_20.roll_die()
+print()
+
+###################################################
+
+# 9.14 Lottery
+from random import choice
+
+# Define a list of 10 numbers and 5 letters
+elements = [1, 'a', 4, 'g', 7, 'o', 'p', 9, 'q', 2, 3, 5, 6, 8, 11]
+
+# Select 4 random elements from the list
+selected_elements = [choice(elements) for _ in range(4)]
+
+# Display the winning ticket message
+print(f"Any ticket matching these 4 numbers or letters {selected_elements} wins a prize. \n")
+
+###################################################
+
+# 9.15 Lottery Analysis
+
+from random import choice
+
+# Define a list of 10 numbers and 5 letters as possible ticket elements
+elements = [1, 'a', 4, 'g', 7, 'o', 'p', 9, 'q', 2, 3, 5, 6, 8, 11]
+
+# Define your ticket as a list of 4 specific elements
+my_ticket = [1, 'a', 7, 'q']
+
+# Initialize a counter to count the number of attempts
+attempts = 0
+
+# Start a loop that continues until a ticket matches 'my_ticket'
+while True:
+    # Draw a random ticket by selecting 4 elements
+    drawn_ticket = [choice(elements) for _ in range(4)]
+    
+    # Increment the attempt counter
+    attempts += 1
+    
+    # Check if the drawn ticket matches 'my_ticket'
+    if drawn_ticket == my_ticket:
+        # If they match, print the number of attempts and break the loop
+        print(f"Winning ticket {drawn_ticket} matches your ticket {my_ticket}!")
+        print(f"It took {attempts} attempts to draw the winning ticket. \n")
+        break
+
+
+
+
+
+
+
 
 
     
