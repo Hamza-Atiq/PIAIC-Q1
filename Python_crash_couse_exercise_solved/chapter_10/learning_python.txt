@@ -1,0 +1,5 @@
+In Python we learn Data Structure
+In Python we learn Conditional Statements
+In Python we learn Built in Functions
+In Python we learn Classes
+In Python we learn user defined Functions
